@@ -52,19 +52,25 @@ class AddressModel {
   }
 
   factory AddressModel.forMap(Map<String, dynamic> data) {
-    return AddressModel(
-      id: data['Id'] as String,
-      name: data['Name'] as String,
-      phoneNumber: data['PhoneNumber'] as String,
-      street: data['Street'] as String,
-      city: data['City'] as String,
-      state: data['State'] as String,
-      postalCode: data['PostalCode'] as String,
-      country: data['Country'] as String,
-      dateTime: (data['DateTime'] as Timestamp).toDate(),
-      selectedAddress: data['SelectedAddress'] as bool
-    );
-  }
+  return AddressModel(
+    id: data['Id'] as String? ?? '',
+    name: data['Name'] as String? ?? '',
+    phoneNumber: data['PhoneNumber'] as String? ?? '',
+    street: data['Street'] as String? ?? '',
+    city: data['City'] as String? ?? '',
+    state: data['State'] as String? ?? '',
+    postalCode: data['PostalCode'] as String? ?? '',
+    country: data['Country'] as String? ?? '',
+    
+    // ✅ Handle null case before casting
+    dateTime: data['DateTime'] != null && data['DateTime'] is Timestamp
+        ? (data['DateTime'] as Timestamp).toDate()
+        : null,
+
+    selectedAddress: data['SelectedAddress'] as bool? ?? false,
+  );
+}
+
 
   factory AddressModel.fromDocumentSnapshot(DocumentSnapshot snapshot){
     final data = snapshot.data() as Map<String, dynamic>;

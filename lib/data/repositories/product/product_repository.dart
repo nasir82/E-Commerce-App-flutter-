@@ -25,6 +25,23 @@ class ProductRepository extends GetxController {
       throw e.toString();
     }
   }
+
+  
+  Future<List<ProductModel>> getAllProduct() async {
+    try {
+      print("###Printing the snapsize called");
+      final snapshot = await db
+          .collection("Products")
+          .get();
+        print("###Printing the snapsize ${snapshot.docs.length}");
+      return snapshot.docs.map((e)=> ProductModel.fromSnapshot(e)).toList();
+    } on FirebaseException catch (e) {
+      throw FirebaseExceptionsCustom(e.code).message;
+    } catch (e) {
+     print("###Printing the snapsize ");
+      throw e.toString();
+    }
+  }
   Future<List<ProductModel>> getAllFeatureProduct() async {
     try {
       final snapshot = await db
@@ -46,6 +63,8 @@ class ProductRepository extends GetxController {
   Future<List<ProductModel>> getProductByQuery(Query query) async {
     try {
       final snapshot = await query.get();
+      print("################### ${snapshot.docs.length}");
+      print("I'm printing that ${snapshot.docs.length}");
      // final List<ProductModel> productList = snapshot.docs.map((toElement) => ProductModel.fromSnapshot(toElement)).toList();
       return snapshot.docs.map((e)=> ProductModel.fromQuerySnapshot(e)).toList();
     } on FirebaseException catch (e) {
@@ -89,9 +108,10 @@ class ProductRepository extends GetxController {
     print("#############\n length = ${products.length} and $categoryId \n ########");
     return products;
     } on FirebaseException catch (e) {
+      print('############################ ${e.toString()}  and throwint error ####');
       throw FirebaseExceptionsCustom(e.code).message;
     } catch (e) {
-      //print('############################ ${e.toString()}  ####');
+      print('############################ ${e.toString()}  and throwint error ####');
       throw e.toString();
 
     }

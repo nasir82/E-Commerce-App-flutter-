@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/appbar/appbar.dart';
+import 'package:flutter_e_commerce_app/features/shop/controllers/cart_controller.dart';
 import 'package:flutter_e_commerce_app/features/shop/screens/cart/cart.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/circuler_image.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/header_container.dart';
@@ -19,6 +20,8 @@ class Settings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final controller  = CartController.instance;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -87,10 +90,11 @@ class Settings extends StatelessWidget {
                       subtitle: "subtitle"),
 
                  const SectionHeading(title: "App Settings") ,    
-                   const SettingMenu(
+                    SettingMenu(
                       icon: Iconsax.activity,
                       title: "Load Data",
                       subtitle: "subtitle",
+                      onTap: () => controller.loadDummyData(),
                      ),
                    const SettingMenu(
                       icon: Iconsax.activity,
@@ -174,10 +178,11 @@ class UserProfileTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = UserController.instance;
     return ListTile(
-      leading:  const CirculerImage(
-        image: ImageString.shoes,
-        width: 50,
-        height: 50,
+      leading:   CirculerImage(
+        image: controller.user.value.profilePicture,
+        width: 60,
+        height: 60,
+        isNetworkImage: true,
         padding: EdgeInsets.zero,
         fit: BoxFit.cover,
       ),

@@ -49,7 +49,7 @@ class CategoryTab extends StatelessWidget {
                           snapshot.hasError ||
                           snapshot.data!.isEmpty) {
                         return  Center(
-                          child: Text("No Data Found $snapshot.error"),
+                          child: Text("No Data Found"),
                         );
                       }
 

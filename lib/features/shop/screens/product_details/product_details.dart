@@ -37,7 +37,7 @@ class ProductDetailsScreen extends StatelessWidget {
                 children: [
                   //rating and share
                   const RatingAndShare(),
-
+                  
                   // price title stock brand
                    ProductMetada(product: product,),
                   //atribute
@@ -46,7 +46,7 @@ class ProductDetailsScreen extends StatelessWidget {
                    ProductAttribute(product: product,),
 
                   
-                  if(product.productType != ProductType.variable.toString())
+                  if(product.productType != ProductType.variable.name)
                   const SizedBox(
                     height: Sizes.spaceBtwSections,
                   ),

@@ -21,7 +21,10 @@ class SortableProduct extends StatelessWidget {
         DropdownButtonFormField(
             decoration: const InputDecoration(prefixIcon: Icon(Iconsax.sort)),
             value: controller.selectedOption.value,
-            onChanged: (value) {},
+            onChanged: (value) {
+              controller.selectedOption.value = value!;
+              controller.sortProducts(value);
+            },
             items: [
               "Name",
               "Higher Price",

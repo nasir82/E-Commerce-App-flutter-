@@ -15,12 +15,14 @@ final _db = FirebaseFirestore.instance;
 Future<List<OrderModel>> fetchUserOrders() async{
   try {
     final userId = AuthenticationRepository.instance.authUser!.uid;
-    if(userId.isEmpty) throw "Unable to find user information. Try again later";
+    print("User id " + userId);
+    if(userId.isEmpty) throw "Unable to find user ID. Try again later";
     final result = await _db.collection("Users").doc(userId).collection("Orders").get();
     return result.docs.map((element)=> OrderModel.fromSnapshot(element)).toList();
 
   } catch (e) {
-    throw "Unable to find user information. Try again later";
+    print(e.toString());
+    throw "Unable to find user information. Try again later ${e.toString}";
   }
 }
 

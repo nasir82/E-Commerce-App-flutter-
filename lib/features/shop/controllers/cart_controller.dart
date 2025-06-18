@@ -1,5 +1,8 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_e_commerce_app/data/repositories/authentication/authentication_repository.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/product/variation_controller.dart';
+import 'package:flutter_e_commerce_app/features/shop/models/brand_model.dart';
 import 'package:flutter_e_commerce_app/features/shop/models/cart_item_model.dart';
 import 'package:flutter_e_commerce_app/features/shop/models/product_model.dart';
 import 'package:flutter_e_commerce_app/utils/constants/enums.dart';
@@ -207,5 +210,18 @@ class CartController extends GetxController{
         }
       //
     }
+  }
+
+
+  Future<void> loadDummyData() async{
+    final db = FirebaseFirestore.instance;  
+
+    await db.collection("Products").doc().set(products[0].toJson());
+    await db.collection("Products").doc().set(products[1].toJson());
+    await db.collection("Products").doc().set(products[2].toJson());
+    await db.collection("Products").doc().set(products[3].toJson());
+    await db.collection("Products").doc().set(products[4].toJson());
+
+    print("###########################\n\n\n\n loaded dummy  \n\n #######");
   }
 }

@@ -32,12 +32,19 @@ class BrandRepository extends GetxController{
       try {
       QuerySnapshot brandCategoryQuery = await _db.collection('BrandCategory').where('categoryId', isEqualTo: categoryId).get();
       List<String> brands = brandCategoryQuery.docs.map((doc)=> doc['brandId'] as String).toList();
+      if(brands.isEmpty){
+        return [];
+      }else{
+
+  
       final brandsQuery  = await _db.collection("Brands").where(FieldPath.documentId, whereIn: brands).limit(2).get();
       List<BrandModel> result = brandsQuery.docs.map((doc)=> BrandModel.fromSnapshot(doc)).toList();
       return result;
+      }
     } on FirebaseException catch (e) {
       throw FirebaseExceptionsCustom(e.code).message;
     } catch (e) {
+      print(e.toString());
       throw "Something went wrong. Please try again";
     }
   }

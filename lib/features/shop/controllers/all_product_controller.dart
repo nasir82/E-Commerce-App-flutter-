@@ -10,11 +10,24 @@ class AllProductController extends GetxController {
   final repository = ProductRepository.instance;
   final RxString selectedOption = 'Name'.obs;
   final RxList<ProductModel> products = <ProductModel>[].obs;
-
+  final RxList<ProductModel> allProducts = <ProductModel>[].obs;
   Future<List<ProductModel>> fetchProductByQuery(Query? query) async {
     try {
       if (query == null) return [];
-      final products = await repository.getProductByQuery(query);
+      final prod = await repository.getProductByQuery(query);
+      print("############## fetch products $prod");
+      return prod;
+    } catch (e) {
+      Loaders.errorSnackbar(title: "Oh chorry", message: e.toString());
+      return [];
+    }
+  }
+
+  Future<List<ProductModel>> getAllProduct() async {
+    try {
+     
+      final products = await repository.getAllProduct();
+      print("############## fetch products $products");
       return products;
     } catch (e) {
       Loaders.errorSnackbar(title: "Oh chorry", message: e.toString());
@@ -27,18 +40,23 @@ class AllProductController extends GetxController {
 
     switch(shortOption){
       case 'Name':
+      print("Name is called");
       products.sort((a,b)=> a.title.compareTo(b.title));
       break;
       case 'Higher Price':
+      print("higer is called");
       products.sort((a,b)=> b.price.compareTo(a.price));
       break;
       case 'Lower Price':
+      print("lower is called");
       products.sort((a,b)=> a.price.compareTo(b.price));
       break;
       case 'Newest':
+      print("newest is called");
       products.sort((a,b)=> a.date!.compareTo(b.date!));
       break;
       case 'Sale':
+      print("sale is called");
       products.sort((a,b){
           if(b.salePrice>0){
             return b.salePrice.compareTo(a.salePrice);
@@ -50,6 +68,7 @@ class AllProductController extends GetxController {
       }) ;
       break;
       default:
+      print("def is called");
       products.sort((a,b)=> a.title.compareTo(b.title));
 
     }

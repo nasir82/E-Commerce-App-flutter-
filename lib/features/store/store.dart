@@ -138,6 +138,7 @@ class BrandShowCase extends StatelessWidget {
               showBorder: true,
               brand:brand,
             ),
+            SizedBox(height: Sizes.spaceBtwItems/2,),
             Row(
                 children: images
                     .map((image) => brandToProductImages(image, context))
@@ -157,11 +158,14 @@ class BrandShowCase extends StatelessWidget {
             : MyColor.light,
         margin: const EdgeInsets.only(right: Sizes.sm),
         padding: const EdgeInsets.all(Sizes.md),
-        child: CachedNetworkImage(
-          fit: BoxFit.contain,
-          imageUrl: image,
-          progressIndicatorBuilder: (context,url, erro)=> const MyShimmerEffect(height: 100, width: 100),
-          errorWidget: (context,url,error)=> const Icon(Icons.error),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(5),
+          child: CachedNetworkImage(
+            fit: BoxFit.contain,
+            imageUrl: image,
+            progressIndicatorBuilder: (context,url, erro)=> const MyShimmerEffect(height: 100, width: 100),
+            errorWidget: (context,url,error)=> const Icon(Icons.error),
+          ),
         ),
       ),
     );

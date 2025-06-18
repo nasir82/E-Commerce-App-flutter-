@@ -30,7 +30,7 @@ class AllProducts extends StatelessWidget {
         child: Padding(
             padding: const EdgeInsets.all(Sizes.defaultSpace),
             child: FutureBuilder(
-                future: futureMethod ?? controller.fetchProductByQuery(query),
+                future: futureMethod ?? controller.getAllProduct(),
                 builder: (context, snapshot) {
 
                   // cloud helper function used in this later
@@ -50,7 +50,8 @@ class AllProducts extends StatelessWidget {
                   }
 
                   final products = snapshot.data!;
-
+                  print("here is te produts");
+                  print(products);
                   return SortableProduct(products: products,);
                 })),
       ),
