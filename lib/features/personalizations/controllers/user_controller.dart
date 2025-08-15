@@ -93,7 +93,7 @@ class UserController extends GetxController {
           auth.authUser!.providerData.map((e) => e.providerId).first;
       if (provider.isNotEmpty) {
         if (provider == 'google.com') {
-          await auth.signInWithGoogle();
+         // await auth.signInWithGoogle();
           await auth.deleteAccount();
           FullScreenloader.stopLoading();
           Get.offAll(() => const LoginScreen());

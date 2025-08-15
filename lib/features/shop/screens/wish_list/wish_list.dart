@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/appbar/appbar.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/layouts/grid_layout.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/products/circle_icon.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/custom_shapes/circle_icon.dart';
 import 'package:flutter_e_commerce_app/features/home/home.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/products/product_cards/product_cartvertical.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/favourite_controller/favourite_controller.dart';

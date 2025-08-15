@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/layouts/grid_layout.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/promo_slider.dart';
+import 'package:flutter_e_commerce_app/commons/styles/promo_slider.dart';
 import 'package:flutter_e_commerce_app/features/shop/screens/all_products/all_products.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/circuler_image.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/header_container.dart';
@@ -8,7 +8,7 @@ import 'package:flutter_e_commerce_app/features/home/widgets/my_appbar.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/products/product_cards/product_cartvertical.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/search_container.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/section_heading.dart';
-import 'package:flutter_e_commerce_app/features/authentications/screens/subcategory_screen.dart';
+import 'package:flutter_e_commerce_app/features/shop/screens/sub_category/subcategory_screen.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/category_controller.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/product/product_controller.dart';
 import 'package:flutter_e_commerce_app/utils/constants/sizes.dart';

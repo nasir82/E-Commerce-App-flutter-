@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/my_circulercontainer.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/section_heading.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/checkout_controller.dart';

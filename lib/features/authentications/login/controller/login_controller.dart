@@ -49,10 +49,14 @@ class LoginController extends GetxController {
 
       //
 
+      print("Going to screendirect");
+
       AuthenticationRepository.instance.screenRedirect();
+      
     } catch (e) {
       FullScreenloader.stopLoading();
       Loaders.errorSnackbar(title: "Error occured", message: e.toString());
+      print(e.toString()); 
     }
   }
 
@@ -61,11 +65,11 @@ class LoginController extends GetxController {
       FullScreenloader.openLoadingDialogue(
           "Loging you ...", ImageString.successLotie);
 
-      final credential =
-          await AuthenticationRepository.instance.signInWithGoogle();
+      // final credential =
+      //     await AuthenticationRepository.instance.signInWithGoogle();
 
       //save the record
-      await userController.saveUserRecord(credential);
+     // await userController.saveUserRecord(credential);
 
       FullScreenloader.stopLoading();
 

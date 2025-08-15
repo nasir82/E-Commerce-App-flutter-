@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/commons/styles/spacing_style.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/divider_with_text.dart';
+import 'package:flutter_e_commerce_app/commons/styles/divider_with_text.dart';
 import 'package:flutter_e_commerce_app/features/authentications/login/widgets/login_form.dart';
 import 'package:flutter_e_commerce_app/features/authentications/login/widgets/login_header.dart';
 import 'package:flutter_e_commerce_app/features/authentications/login/widgets/login_with_social_button.dart';

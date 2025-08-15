@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/data/repositories/user/user_repository.dart';
 import 'package:flutter_e_commerce_app/features/authentications/login/login.dart';
 import 'package:flutter_e_commerce_app/features/authentications/screens/onboarding/onboarding.dart';
@@ -56,15 +57,21 @@ class AuthenticationRepository extends GetxController {
       return await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
     } catch (e) {
-      Loaders.warnigSnackbar(title: "Something went wrong");
+      print("There is an error: \n ${e.toString()}");
+      Loaders.warnigSnackbar(title: "Something went wrong: $e}");
       rethrow;
     }
   }
 
+
   Future<UserCredential> logInWithEmailAndPassword(
       String email, String password) async {
     try {
-      return _auth.signInWithEmailAndPassword(email: email, password: password);
+
+      final userCred = _auth.signInWithEmailAndPassword(email: email, password: password);
+      print(userCred.toString()+ "  \ndone error");
+      return userCred;
+      
     } on FirebaseAuthException catch (e) {
       throw FirebaseExceptionsCustom(e.code).message;
     } on FirebaseException catch (e) {
@@ -92,7 +99,7 @@ class AuthenticationRepository extends GetxController {
   ///logout user
   Future<void> logOut() async {
     try {
-      await GoogleSignIn().signOut();
+      //await GoogleSignIn().signOut();
       await FirebaseAuth.instance.signOut();
       Get.offAll(const LoginScreen());
     } on FirebaseAuthException catch (e) {
@@ -104,23 +111,23 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-  Future<UserCredential?> signInWithGoogle() async {
-    try {
-      final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
-      final GoogleSignInAuthentication? googleAuth =
-          await userAccount?.authentication;
-      final credential = GoogleAuthProvider.credential(
-          accessToken: googleAuth?.accessToken, idToken: googleAuth?.idToken);
-      return _auth.signInWithCredential(credential);
-    } on FirebaseAuthException catch (e) {
-      throw FirebaseExceptionsCustom(e.code).message;
-    } on FirebaseException catch (e) {
-      throw FirebaseExceptionsCustom(e.code).message;
-    } catch (e) {
+  // Future<UserCredential?> signInWithGoogle() async {
+  //   try {
+  //     final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+  //     final GoogleSignInAuthentication? googleAuth =
+  //         await userAccount?.authentication;
+  //     final credential = GoogleAuthProvider.credential(
+  //         accessToken: googleAuth?.accessToken, idToken: googleAuth?.idToken);
+  //     return _auth.signInWithCredential(credential);
+  //   } on FirebaseAuthException catch (e) {
+  //     throw FirebaseExceptionsCustom(e.code).message;
+  //   } on FirebaseException catch (e) {
+  //     throw FirebaseExceptionsCustom(e.code).message;
+  //   } catch (e) {
      
-      return null;
-    }
-  }
+  //     return null;
+  //   }
+  // }
   //forgot password
    Future<void> sendPasswordResetEmail(String email) async {
     try {

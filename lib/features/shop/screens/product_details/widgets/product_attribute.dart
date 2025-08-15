@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce_app/commons/product_price_text.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/products/product_price_text.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/products/product_title.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/my_circulercontainer.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/section_heading.dart';

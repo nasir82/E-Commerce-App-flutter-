@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/images/rounded_image.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/appbar/appbar.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/custom_cliper.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/favourite_icon/favourite_icon.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/icons/favourite_icon/favourite_icon.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/product/image_controller.dart';
 import 'package:flutter_e_commerce_app/features/shop/models/product_model.dart';
 import 'package:flutter_e_commerce_app/utils/constants/color.dart';

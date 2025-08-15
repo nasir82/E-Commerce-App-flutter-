@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/brand_title.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/brand/brand_title.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/images/rounded_image.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/verified_brand_title_text.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/brand/verified_brand_title_text.dart';
 import 'package:flutter_e_commerce_app/features/shop/models/cart_item_model.dart';
 import 'package:flutter_e_commerce_app/utils/constants/color.dart';
 import 'package:flutter_e_commerce_app/utils/constants/image_strings.dart';

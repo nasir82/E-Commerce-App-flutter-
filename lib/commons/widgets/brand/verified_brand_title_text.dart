@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/brand_title.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/brand/brand_title.dart';
 import 'package:flutter_e_commerce_app/utils/constants/color.dart';
 import 'package:flutter_e_commerce_app/utils/constants/enums.dart';
 import 'package:flutter_e_commerce_app/utils/constants/sizes.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce_app/commons/product_price_text.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/products/product_price_text.dart';
 import 'package:flutter_e_commerce_app/features/shop/screens/cart/cart_item.dart';
 import 'package:flutter_e_commerce_app/features/shop/screens/cart/widget/ProductQuantityWithAddRemove.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/cart_controller.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/features/home/home.dart';
-import 'package:flutter_e_commerce_app/features/authentications/screens/subcategory_screen.dart';
+import 'package:flutter_e_commerce_app/features/shop/screens/sub_category/subcategory_screen.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/category_controller.dart';
 import 'package:get/get.dart';
 

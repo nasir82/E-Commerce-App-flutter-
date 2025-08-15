@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce_app/commons/widgets/products/product_title.dart';
-import 'package:flutter_e_commerce_app/commons/widgets/verified_brand_title_text.dart';
+import 'package:flutter_e_commerce_app/commons/widgets/brand/verified_brand_title_text.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/circuler_image.dart';
 import 'package:flutter_e_commerce_app/features/home/widgets/my_circulercontainer.dart';
 import 'package:flutter_e_commerce_app/features/shop/controllers/product/product_controller.dart';
