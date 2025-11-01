@@ -56,6 +56,7 @@ class LoginController extends GetxController {
     } catch (e) {
       FullScreenloader.stopLoading();
       Loaders.errorSnackbar(title: "Error occured", message: e.toString());
+      print("\n\n\n\n\n\n ######################");
       print(e.toString()); 
     }
   }

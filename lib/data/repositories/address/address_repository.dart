@@ -38,8 +38,11 @@ class AddressRepository extends GetxController{
   Future<String> addAddress(AddressModel address) async{
     try {
       final userId = AuthenticationRepository.instance.authUser!.uid;
-      final currentAddress  = await db.collection("Users").doc(userId).collection("Addresses").add(address.toJson());
-      return currentAddress.id;
+      address.copyWith(id: userId);
+      final docRef = db.collection("Users").doc(userId).collection("Addresses").doc();
+      address.copyWith(id: docRef.id);
+      await docRef.set(address.toJson());
+      return address.id;
     } catch (e) {
       throw 'Something went wrong';
       

@@ -24,6 +24,7 @@ class LoginForm extends StatelessWidget {
         children: [
           TextFormField(
             controller: controller.email,
+       
             validator: (value)=>ValidatorHelper.validateEmail(value),
             decoration: const InputDecoration(
               prefixIcon: Icon(Iconsax.direct_right),

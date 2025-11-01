@@ -14,7 +14,7 @@ Rx<PaymentMethodModel> selectedPaymentMethod = PaymentMethodModel.empty().obs;
 
 @override
 void onInit() {
-    selectedPaymentMethod.value = PaymentMethodModel(name: "Paypal", image: ImageString.shoes);
+    selectedPaymentMethod.value = PaymentMethodModel(name: "Paypal", image: "assets/icons/paypal.png");
     super.onInit();
   }
 
@@ -28,19 +28,19 @@ Future<dynamic> selectPaymentMethod(BuildContext context){
         children: [
           const SectionHeading(title: "Select Payment Method", isShowButton: false,),
           const SizedBox(height: Sizes.spaceBtwSections,),
-          PaymentTile(paymentMethod:PaymentMethodModel(name: "Paypal", image: ImageString.shoes)),
+          PaymentTile(paymentMethod:PaymentMethodModel(name: "Paypal", image: "assets/icons/paypal.png")),
           const SizedBox(height: Sizes.spaceBtwItems/2,),
-          PaymentTile(paymentMethod:PaymentMethodModel(name: "Google Pay", image: ImageString.shoes)),
+          PaymentTile(paymentMethod:PaymentMethodModel(name: "Google Pay", image: "assets/icons/googlepay.png")),
           const SizedBox(height: Sizes.spaceBtwItems/2,),
-          PaymentTile(paymentMethod:PaymentMethodModel(name: "Apple Pay", image: ImageString.shoes)),
+          PaymentTile(paymentMethod:PaymentMethodModel(name: "Apple Pay", image: "assets/icons/applepay.png")),
           const SizedBox(height: Sizes.spaceBtwItems/2,),
-          PaymentTile(paymentMethod:PaymentMethodModel(name: "Master Card", image: ImageString.shoes)),
+          PaymentTile(paymentMethod:PaymentMethodModel(name: "Master Card", image: "assets/icons/visa.png")),
           const SizedBox(height: Sizes.spaceBtwItems/2,),
-          PaymentTile(paymentMethod:PaymentMethodModel(name: "Paytm", image: ImageString.shoes)),
+          PaymentTile(paymentMethod:PaymentMethodModel(name: "Paytm", image: "assets/icons/paytm.png")),
           const SizedBox(height: Sizes.spaceBtwItems/2,),
-          PaymentTile(paymentMethod:PaymentMethodModel(name: "Paystack", image: ImageString.shoes)),
+          PaymentTile(paymentMethod:PaymentMethodModel(name: "Paystack", image: "assets/icons/paypal.png")),
           const SizedBox(height: Sizes.spaceBtwItems/2,),
-          PaymentTile(paymentMethod:PaymentMethodModel(name: "Credit Card", image: ImageString.shoes)),
+          PaymentTile(paymentMethod:PaymentMethodModel(name: "Credit Card", image: "assets/icons/card.png")),
           const SizedBox(height: Sizes.spaceBtwItems/2,),
           const SizedBox(height: Sizes.spaceBtwSections,),
         ],

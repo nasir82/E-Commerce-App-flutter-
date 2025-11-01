@@ -19,8 +19,10 @@ class CategoryRepository extends GetxController{
       final snapshots = await _db.collection("Categories").get();
       final list = snapshots.docs.map((e)=> CategoryModel.fromSnapshot(e)).toList();
       print(" #####list size ${list.length} #########");
-      
-      return list;
+      print(list[0].id);
+      final reversList = list.reversed.toList();
+      print(list[0].id);
+      return reversList;
       
     }on FirebaseException catch(e){
       throw FirebaseExceptionsCustom(e.code).message;

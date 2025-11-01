@@ -45,8 +45,8 @@ class ProfileScreen extends StatelessWidget {
                             )
                           : CirculerImage(
                               image: image,
-                              height: 80,
-                              width: 80,
+                              height: 150,
+                              width: 150,
                               isNetworkImage: networkImage.isNotEmpty,
                             );
                     }),
@@ -92,12 +92,6 @@ class ProfileScreen extends StatelessWidget {
               const SectionHeading(title: "Personal Information"),
               const SizedBox(
                 height: Sizes.spaceBtwItems,
-              ),
-              ProfileMenu(
-                title: "User Id ",
-                value: controller.user.value.id,
-                icon: Iconsax.copy,
-                onPressed: () {},
               ),
               ProfileMenu(
                 title: "E-mail ",

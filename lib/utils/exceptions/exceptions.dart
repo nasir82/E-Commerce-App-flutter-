@@ -28,8 +28,6 @@ class FirebaseExceptionsCustom implements Exception {
         return 'Qouta exceeded please try again laiter';
       case 'account-exists-with-different-credential':
         return 'An account already exists with a different credential. Please use another method';
-      case 'invalid-credential':
-        return 'The credential provided is invalid. Please check and try again';
       case 'network-request-failed':
         return 'A network error occurred. Please check your internet connection';
       case 'too-many-requests':

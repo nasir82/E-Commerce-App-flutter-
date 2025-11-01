@@ -29,8 +29,9 @@ class MyCart extends StatelessWidget {
           text: "Your cart is empty.",
           animation: ImageString.successLotie,
           showAction: true,
-          actionText: "Let\'s fill it",
-          onActionClick: () => Get.off(() => const NavigationMenu()),
+          actionText: "Let's fill it",
+          onActionClick: (){ 
+            Get.off(() => const NavigationMenu());}
         );
         if (controller.cartItems.isEmpty) {
           return emptyAnimation;

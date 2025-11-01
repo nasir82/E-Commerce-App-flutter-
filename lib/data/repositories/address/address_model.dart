@@ -36,6 +36,34 @@ class AddressModel {
       postalCode: '',
       country: '');
 
+
+
+  AddressModel copyWith({
+    String? id,
+    String? name,
+    String? phoneNumber,
+    String? street,
+    String? city,
+    String? state,
+    String? postalCode,
+    String? country,
+    DateTime? dateTime,
+    bool? selectedAddress,
+  }) {
+    return AddressModel(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
+      street: street ?? this.street,
+      city: city ?? this.city,
+      state: state ?? this.state,
+      postalCode: postalCode ?? this.postalCode,
+      country: country ?? this.country,
+      dateTime: dateTime ?? this.dateTime,
+      selectedAddress: selectedAddress ?? this.selectedAddress,
+    );
+  }
+
   Map<String, dynamic> toJson() {
     return {
       'Id': id,
