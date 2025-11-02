@@ -87,7 +87,7 @@ The motive of this project is to create an e-commerce app that allows users to e
 <table>
 <tr>
 <td width="20%">
-  <img width="200" height="450" alt="Sign Up Screen" src="https://github.com/user-attachments/assets/7e14af7a-025d-438e-8609-41a15853e52c" />
+  <img width="200" height="450" alt="Sign Up Screen" src="https://github.com/user-attachments/assets/51bab66f-b6b6-45f0-8e9b-4c215f57bb25" />
 </td>
 <td width="30%" valign="center">
 
@@ -101,10 +101,10 @@ The motive of this project is to create an e-commerce app that allows users to e
 
 ### Sign In Screen
 
-<table>
+
 <tr>
 <td width="20%">
-  <img width="200" height="450" alt="login" src="https://github.com/user-attachments/assets/2d8dc2c8-c599-4326-8e74-17529e498b18" />
+  <img width="200" height="450" alt="login" src="https://github.com/user-attachments/assets/e5e4cdeb-a579-47ef-a990-4d77864e9265" />
 
 </td>
 <td width="30%" valign="center">
@@ -120,10 +120,13 @@ The motive of this project is to create an e-commerce app that allows users to e
 
 ### Home Screen
 
+![Screenshot_20251102-022259]()
+
+
 <table>
 <tr>
 <td width="20%">
-   <img width="200" height="450" alt="home" src="https://github.com/user-attachments/assets/ba508aee-1c1c-4266-9e6e-adfc976108fa" />
+   <img width="200" height="450" alt="home" src="https://github.com/user-attachments/assets/7b4326f2-465b-4888-abf9-5042470dda3d" />
 </td>
 <td width="30%" valign="center">
 
@@ -140,10 +143,14 @@ The motive of this project is to create an e-commerce app that allows users to e
 
 ### Product Details Screen
 
+
 <table>
 <tr>
 <td width="20%">
-  <img width="200" height="450" alt="product_details" src="https://github.com/user-attachments/assets/0f6a4a8b-4745-49a5-bef0-74c057e4435d" />
+  <img width="200" height="450" alt="product_details" src="https://github.com/user-attachments/assets/88134ebd-dfdf-4635-990e-ff5b0c67e3a7" />
+</td>
+<td width="20%">
+  <img width="200" height="450" alt="product_details" src="https://github.com/user-attachments/assets/b205f320-0a09-46c8-aa56-91b33eb44cfc" />
 </td>
 <td width="30%" valign="center">
 
@@ -165,7 +172,7 @@ The motive of this project is to create an e-commerce app that allows users to e
 <table>
 <tr>
 <td width="20%">
-  <img width="200" height="450" alt="checkout" src="https://github.com/user-attachments/assets/f4b29706-46d1-4f93-bcf5-f462e81a1854" />
+  <img width="200" height="450" alt="checkout" src="https://github.com/user-attachments/assets/566b17b5-0734-4a77-bb78-337eb5f381ff" />
 </td>
 <td width="30%" valign="center">
 
